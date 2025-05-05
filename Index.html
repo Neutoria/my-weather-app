@@ -12,24 +12,28 @@
 <body>
   <div class="wrapper">
   <header>
-    <form action="">
-      <input type="search" placeholder="Enter a city...">
-      <input type="submit" value="Search">
+    <form class="search-form">
+      <input type="search" placeholder="Enter a city..." class="search-form-input">
+      <input type="submit" value="Search" class="search-form-button">
     </form>
-    <main>
-      <div class="left-section">
-        <h1>Cape Town</h1>
-          <p>Friday 17:49, cloudy
-        <br/>
-            Humidity: 0%, Wind: 30km/h
-          </p>
-    </div>
-    <div class="right-section">
-      <p>☁️ 12°C</p>
-    </div>
-      
-    </main>
   </header>
+    <main>
+      <div class="weather-data">
+        <div class="left-section">
+          <h1 class="city">Cape Town</h1>
+            <p class="weather-details">Friday 17:49, cloudy
+        <br/>
+            Humidity: <span class="pink-text">0%</span>, Wind: <span class="pink-text">30km/h</span>
+            </p>
+        </div>
+        <div class="right-section">
+          <div class="icon">☁️</div>
+          <div class="temperature"> 12</div>
+          <div class="temperature-unit">°C</div>
+        </div>
+      </div>
+    </main>
+ 
   
 
   <footer>
