@@ -7,7 +7,12 @@ let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${api
 axios.get(apiUrl).then(refreshWeather);
 }
 
-
+function refreshWeather (response){
+  let temperature = document.querySelector("#weather-app-temperature");
+  let cityInput = document.querySelector("#city");
+  temperature.innerHTML = Math.round(response.data.temperature.current);
+  cityInput.innerHTML = response.data.city;
+}
 
 function search (event){
   event.preventDefault();
@@ -17,10 +22,7 @@ function search (event){
   searchCity(userInput.value);
 }
 
-function refreshWeather (response){
-  let temperature = document.querySelector("#weather-app-temperature");
-  temperature.innerHTML = Math.round(response.data.temperature.current);
-}
+
 
 
 let searchForm = document.querySelector("#search-form");
